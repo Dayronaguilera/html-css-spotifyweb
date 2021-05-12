@@ -1,0 +1,62 @@
+.container-fluid{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.cont main{
+    flex-grow: 1;    
+}
+/* start utility class */
+
+
+
+
+/* end utility class */
+
+/* container aside laterale */
+.row aside{
+    background-color:black;
+}
+
+/* container section */
+.row section{
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+}
+
+/* container footer */
+.cont footer{
+    background-color: gray;
+    height: 70px;
+}
+.box-1{
+    background-color: rgb(42, 42, 42);
+    height: 70px;     
+}
+.box-2{
+    background-color: brown;
+    height: 50px;
+    margin:0 auto;
+}
+.box-3{
+    background-color: brown;
+    flex-grow: 1;
+}
+/* top bar */
+.box-1 button{
+    background-color: rgb(42, 42, 42);
+    float: right;
+    font-size: 15px;
+    padding: 10px;
+    border: 1px white solid;
+    border-radius: 20px;
+    color: white;
+    margin: 15px 15px;       
+}
+.box-2> ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+   
+}
