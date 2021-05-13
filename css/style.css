@@ -13,19 +13,23 @@
 
 /* container aside laterale */
 .row aside{
-    max-height: 100vh;
+    max-height: calc( 100vh - 60px);
     background-color:black;
 }
 
 /* container footer */
 .cont footer{
     background-color: gray;
-    height: 80px;
+    height: 60px;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    z-index: 1002;
 }
 
 /* container section */
 .row section{
-    height: calc(100vh - 80px);
+    height: calc(100vh - 60px);
     background-color: rgb(17, 58, 92);
     overflow-y: scroll;
 }
@@ -39,12 +43,14 @@
 }
 .box-2{
     height: 50px;
-    margin: 80px auto 0px;  
+    margin: 80px auto 0px; 
+    display: flex;
+    justify-content: center; 
 }
 
 /* top bar */
 .box-1 button{
-    background-color: rgb(42, 42, 42);
+    background-color: transparent;
     font-size: 15px;
     padding: 10px 30px;
     border: 1px white solid;
@@ -56,22 +62,24 @@
     right: 0;
 }
 /* nav bar section */
+
 .box-2> ul li{
     font-size: 15px;
     list-style: none;
     display: inline-block;
-    padding: 10px;  
+    padding: 10px; 
 }
 /* start album */
-.album img{
-    height: 150px;   
-    
-}
-.row .album{
-    margin: 10px;
-    flex-grow: 1;  
-}
 
+.row-album{
+    justify-content: flex-start
+
+}
+.album{
+    width: calc((100% / 6)- 10px);
+    margin-left: 5px;
+    flex-wrap: nowrap;
+}
 /* start aside section */
 aside{
     display: flex;
@@ -79,10 +87,33 @@ aside{
     color: white;
     justify-content: space-between;
 }
-.aside-list {
-    list-style: none;
-}
-.logo img{
+.logo {
     height: 35px;
     margin: 15px;
+}
+.aside-list> h3, .aside-list> ul{
+    padding: 15px;
+    list-style: none;
+    line-height: 25px;
+    
+}
+.aside-list ul li{
+    display: flex;
+    font-size: 15px;
+    margin-top: 5px;
+}
+.aside-list img{
+    height: 25px;
+}
+.aside-list span{  
+    padding-left: 3px;
+}
+.aside-bottom{
+    padding: 10px;
+    line-height: 30px;
+}
+.aside-list ul li i{
+    font-size: 30px;
+    padding-right: 3px;
+    color: gray;
 }
