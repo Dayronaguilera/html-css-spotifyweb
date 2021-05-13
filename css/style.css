@@ -9,54 +9,80 @@
 /* start utility class */
 
 
-
-
 /* end utility class */
 
 /* container aside laterale */
 .row aside{
+    max-height: 100vh;
     background-color:black;
-}
-
-/* container section */
-.row section{
-    background-color: cadetblue;
-    display: flex;
-    flex-direction: column;
 }
 
 /* container footer */
 .cont footer{
     background-color: gray;
-    height: 70px;
+    height: 80px;
+}
+
+/* container section */
+.row section{
+    height: calc(100vh - 80px);
+    background-color: rgb(17, 58, 92);
+    overflow-y: scroll;
 }
 .box-1{
     background-color: rgb(42, 42, 42);
-    height: 70px;     
+    height: 70px;
+    width: 100%;  
+    position: fixed;  
+    z-index: 1001;
+
 }
 .box-2{
-    background-color: brown;
     height: 50px;
-    margin:0 auto;
+    margin: 80px auto 0px;  
 }
-.box-3{
-    background-color: brown;
-    flex-grow: 1;
-}
+
 /* top bar */
 .box-1 button{
     background-color: rgb(42, 42, 42);
-    float: right;
     font-size: 15px;
-    padding: 10px;
+    padding: 10px 30px;
     border: 1px white solid;
     border-radius: 20px;
     color: white;
-    margin: 15px 15px;       
+    margin: 15px 15px;
+    position: fixed;  
+    z-index: 1001;
+    right: 0;
 }
+/* nav bar section */
 .box-2> ul li{
+    font-size: 15px;
     list-style: none;
     display: inline-block;
-    padding: 10px;
-   
+    padding: 10px;  
+}
+/* start album */
+.album img{
+    height: 150px;   
+    
+}
+.row .album{
+    margin: 10px;
+    flex-grow: 1;  
+}
+
+/* start aside section */
+aside{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-between;
+}
+.aside-list {
+    list-style: none;
+}
+.logo img{
+    height: 35px;
+    margin: 15px;
 }
