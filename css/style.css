@@ -2,35 +2,36 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 .cont main{
-    flex-grow: 1;    
+    flex-grow: 1;
+   
 }
 /* start utility class */
-
-
+.claerfix{
+    content: "";
+    display: table;
+    clear: both;
+}
+.fl{
+    float: left;
+}
+h6 {
+    color: grey;
+    font-size: 15px;
+    margin-top: 5px;
+}
 /* end utility class */
 
-/* container aside laterale */
-.row aside{
-    max-height: calc( 100vh - 60px);
-    background-color:black;
-}
 
-/* container footer */
-.cont footer{
-    background-color: gray;
-    height: 60px;
-    position: fixed;
-    bottom: 0%;
-    width: 100%;
-    z-index: 1002;
-}
+
 
 /* container section */
 .row section{
-    height: calc(100vh - 60px);
     background-color: rgb(17, 58, 92);
+    max-height: calc( 100vh - 90px);
     overflow-y: scroll;
 }
 .box-1{
@@ -39,7 +40,8 @@
     width: 100%;  
     position: fixed;  
     z-index: 1001;
-
+   
+    
 }
 .box-2{
     height: 50px;
@@ -52,68 +54,261 @@
 .box-1 button{
     background-color: transparent;
     font-size: 15px;
-    padding: 10px 30px;
+    padding: 10px 40px;
     border: 1px white solid;
     border-radius: 20px;
     color: white;
     margin: 15px 15px;
     position: fixed;  
     z-index: 1001;
-    right: 0;
+    right: 10px;
+}
+.box-1 button:hover {
+    transform: scale(1.1);
+    cursor: pointer;         
 }
 /* nav bar section */
-
+.box-2> ul{
+    display: flex; 
+    flex-direction: row;
+}
 .box-2> ul li{
-    font-size: 15px;
+    margin: 0px 10px;
+    font-size: 20px;
     list-style: none;
-    display: inline-block;
-    padding: 10px; 
+    color: rgb(138, 138, 138); 
+    display: flex; 
+    flex-direction: column;  
+    align-items: center;
+}
+.box-2> ul li:hover{
+    color: white;
+    cursor: pointer;
+}
+.green{
+    justify-content: center;
+    width: 35%;
+    border-top: 2px rgb(46, 255, 109) solid;
+}
+.green:hover{
+    display: block;
+ 
 }
 /* start album */
-
-.row-album{
-    justify-content: flex-start
-
-}
-.album{
-    width: calc((100% / 6)- 10px);
-    margin-left: 5px;
-    flex-wrap: nowrap;
-}
-/* start aside section */
-aside{
+.container-album{
     display: flex;
     flex-direction: column;
-    color: white;
+    padding: 10px;
+}
+.title{
+    margin-top: 10px;
+    padding:0px 10px;
+}
+.album{
+    width: calc(100% / 6);
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px; 
+    line-height: 20px;
+    
+}
+.album img{  
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+}
+.circle-play{
+    position: relative;
+}
+
+/* img circle + hover */
+.circle-play i{
+    display: none;
+    color: rgba(255, 255, 255,0.8);
+    font-size: 90px;
+    overflow: visible;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.circle-play:hover img {
+    opacity: 0.5;   
+}
+
+.circle-play:hover i {
+    display: block; 
+    cursor: pointer;    
+}
+.circle{
+    border-radius: 100%;
+}
+
+/* container aside laterale */
+.row aside{  
+    max-height: calc( 100vh - 90px);
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+    color: rgb(177, 172, 172);
     justify-content: space-between;
 }
+
+
+/* start aside section */
 .logo {
-    height: 35px;
+    height: 50px;
     margin: 15px;
 }
-.aside-list> h3, .aside-list> ul{
-    padding: 15px;
+.aside-list> ul{
+    padding: 20px;
     list-style: none;
-    line-height: 25px;
+    line-height: 30px;
     
+}
+.border-left{
+    border-left: 2px yellowgreen solid;
 }
 .aside-list ul li{
     display: flex;
-    font-size: 15px;
-    margin-top: 5px;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 10px;
 }
-.aside-list img{
-    height: 25px;
+.aside-list ul li:hover{
+    color: white;
+}
+.aside-list img,.aside-bottom img {
+    height: 30px;
+    margin-left: 10px;
+}
+.aside-list ul:nth-child(2){
+    margin-left: 10px;
 }
 .aside-list span{  
-    padding-left: 3px;
+    padding-left: 5px;
 }
 .aside-bottom{
-    padding: 10px;
+    padding: 20px;
     line-height: 30px;
+}
+.aside-bottom div{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+.aside-bottom div img{
+    margin-right: 10px;
+}
+.profile{
+    background-color: gray;
+    border-radius: 50%;
 }
 .aside-list ul li i{
     font-size: 30px;
     padding-right: 3px;
     color: gray;
+}
+
+/* container footer */
+.cont footer{
+    background-color: rgb(49, 48, 48);
+    height: 90px;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    z-index: 1001;
+    display: flex;
+    
+}
+
+/* container left e right */
+footer .left, .right{
+    display: flex;
+    align-items: center;
+    flex-basis: 230px;
+    height: 100%;
+    color: white;
+}
+
+footer .left img{
+    width: 25%;
+    margin: 0px 10px;
+}
+.left div i{
+    margin-left: 15px;
+}
+.right i{
+    margin: 0px 10px;
+}
+.right i+div{
+    flex-basis: 10%;
+    border: 3px rgb(255, 255, 255) solid;
+}
+.right i+div:hover{
+    border: 3px rgb(33, 202, 47) solid;
+    cursor: pointer;
+}
+.right div:last-child{
+    flex-basis: 30%;
+    border: 3px rgb(144, 142, 142) solid;
+}
+
+/* container center */
+footer .center{
+    flex-basis: 50%;
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    
+}
+.icons div i{   
+    font-size: 20px;
+    margin: 0px 10px;
+}
+.icons>i{
+    font-size: 40px;    
+    margin: 0px 5px;
+}
+.icons>i:hover {
+    transform: scale(1.1);
+    cursor: pointer;         
+}
+.bar-time{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bar-time div{
+    display: inline-block;
+}
+.bar-time div:nth-child(2){
+    flex-basis: 5%;
+    border-top: 3px rgb(255, 255, 255) solid;
+}
+/* hover bart time */
+.bar-time div:nth-child(2):hover{
+    border-top: 4px rgb(33, 202, 47) solid;
+    cursor: pointer;
+}
+
+.bar-time div:nth-child(3){
+    flex-basis: 40%;
+    border-top: 4px rgb(133, 133, 133) solid;
+}
+.time{
+    display: flex;
+    align-items: center;
+    margin: 10px 20px;
+    font-size: 15px;
 }

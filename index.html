@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/12bool-responsive.css">
     <link rel="stylesheet" href="./css/style.css">
+    <title>Spotify</title>
 </head>
 <body>
     <div class="container-fluid cont">
@@ -20,7 +22,7 @@
                     
                     <div class="aside-list">
                         <ul>
-                            <li>
+                            <li class="border-left">
                                 <img src="./img/home.svg" alt="home"> 
                                 <span>Home</span> 
                             </li>
@@ -34,8 +36,8 @@
                             </li>
                         </ul>
 
-                            <h3>Playlist</h3>
-                            <ul>
+                        <ul>
+                                <li><h3>Playlist</h3></li>
                                 <li>
                                    <i class="fas fa-plus-square"></i>
                                    <span>Crea playlist</span> 
@@ -47,14 +49,20 @@
                                 <li>Nome playlist</li>
                                 <li>Nome playlist</li>
                                 <li>Nome playlist</li>
-                            </ul> 
+                        </ul> 
                     </div>
                 </div>
                 <div class="aside-bottom">    
                     
-                    <div>Installa app</div>
+                    <div>
+                        <img src="./img/download.svg" alt="">
+                       <h6>Installa app</h6> 
+                    </div>
                     <hr>
-                    <div>John Doe</div>    
+                    <div>
+                        <img class="profile" src="./img/profile.svg" alt="profile">
+                        <h3>John Doe</h3>
+                    </div>    
                 </div>    
             </aside>
 
@@ -66,74 +74,193 @@
                 <!-- nav section  -->
                 <nav class="box-2"> 
                     <ul>
-                        <li>IN EVIDENZA</li>
-                        <li>PODCAST</li>
-                        <li>CLASSIFICHE</li>
-                        <li>GENERI E MOOD</li>
-                        <li>NUOVE USCITE</li>
-                        <li>SCOPRI</li>
+                        <li>
+                            <span>IN EVIDENZA</span> 
+                            <div class="green"></div>
+                        </li>
+                        <li>
+                            <span>PODCAST</span>                             
+                        </li>
+                        <li>
+                            <span>CLASSIFICHE</span>                            
+                        </li>
+                        <li>
+                            <span>GENERI E MOOD</span>                           
+                        </li>
+                        <li>
+                            <span>NUOVE USCITE</span>                           
+                        </li>
+                        <li>
+                            <span>SCOPRI</span>  
+                        </li>
                     </ul>   
                 </nav>
                 <!-- ulbum container -->
-                <div class="title">
-                    <!-- title album -->
-                    <h2>Recently played</h2>
-                </div>
-                <div class="row row-album">
-                    <!-- copertine row 1-->
-                    <div class="album">
-                        <img src="./img/metal_lifting.jpg" alt="haevy metal"> <br>
-                        <div>Haevy Metal</div> 
-                        <div>Subtitle</div>
-                    </div> 
-                    <div class="album">
-                        <img src="./img/metal_lifting.jpg" alt="haevy metal"> <br>
-                        <div>Haevy Metal</div> 
-                        <div>Subtitle</div>
-                    </div> 
-                    <div class="album">
-                        <img src="./img/metal_lifting.jpg" alt="haevy metal"> <br>
-                        <div>Haevy Metal</div>
-                        <div>Subtitle</div>
-                    </div> 
-                    <div class="album">
-                        <img src="./img/metal_lifting.jpg" alt="haevy metal"> <br>
-                        <div>Haevy Metal</div>
-                        <div>Subtitle</div>
-                    </div> 
-                    <div class="album">
-                        <img src="./img/metal_lifting.jpg" alt="haevy metal"> <br>
-                        <div>Haevy Metal</div>
-                        <div>Subtitle</div>
-                    </div> 
-                    <div class="album">
-                        <img src="./img/metal_lifting.jpg" alt="haevy metal"> <br>
-                        <div>Haevy Metal</div>
-                        <div>Subtitle</div>
-                    </div> 
-                                        
-                </div>
-                <div class="title">
-                    <!-- title album -->
-                    <h2>Recently played</h2>
-                </div>
-                <div class="row row-album">
-                    <!-- copertine row 1-->
-                    <div class="album">
-                        <img src="./img/metal_lifting.jpg" alt="haevy metal"> <br>
-                        <div>Haevy Metal</div> 
-                        <div>Subtitle</div>
-                    </div> 
-                    <div class="album">
-                        <img src="./img/metal_lifting.jpg" alt="haevy metal"> <br>
-                        <div>Haevy Metal</div> 
-                        <div>Subtitle</div>
-                    </div> 
+                <div class="container-album">
+                    <div class="title">
+                        <!-- title album -->
+                        <h1>Recently played</h1>
+                    </div>
+                    <div class="row-album clearfix">
+                        <!-- copertine row 1-->
+                        <div class="album fl">
 
+                            <div class="circle-play">
+                                <img src="./img/metal_lifting.jpg" alt="haevy metal">
+                                <i class="far fa-play-circle"></i>
+                            </div>  
+
+                            <h3>Haevy Metal</h3> 
+                            <h6>Subtitle</h6>
+                        </div> 
+                        <div class="album fl">
+                            <div class="circle-play">
+                                <img src="./img/stranger.jpeg" alt="stranger"> 
+                                <i class="far fa-play-circle"></i>
+                            </div>  
+
+                            <h3>Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</h3> 
+                            <h6>Kylie Dixon & Michael Stein</h6>
+                        </div> 
+                        <div class="album fl">
+                            <div class="circle-play">
+                                <img src="./img/aquietplace.jpeg" alt="aquietplace"> 
+                                <i class="far fa-play-circle"></i>
+                            </div>  
+
+                            <h3>A quiet place</h3>
+                            <h6>Subtitle</h6>
+                        </div> 
+                        <div class="album fl">
+                            <div class="circle-play">
+                                <img src="./img/split.jpeg" alt="split"> 
+                                <i class="far fa-play-circle"></i>
+                            </div>  
+
+                            <h3>Split</h3>
+                            <h6>Subtitle</h6>
+                        </div> 
+                        <div class="album fl">
+                            <div class="circle-play">
+                                <img src="./img/cure.jpeg" alt="cure"> 
+                                <i class="far fa-play-circle"></i>
+                            </div>  
+
+                            <h3>A cure for wellness</h3>
+                            <h6>Subtitle</h6>
+                        </div> 
+                        <div class="album fl">
+                            <div class="circle-play">
+                                <img src="./img/sinister.jpeg" alt="sinister"> 
+                                <i class="far fa-play-circle"></i>
+                            </div>  
+
+                            <h3>Sinister</h3>
+                            <h6>Subtitle</h6>
+                        </div> 
+                    </div> 
+                </div>
+
+                <div class="container-album">
+                    <div class="title">
+                        <!-- title album -->
+                        <h1>Creato per Jhon Doe</h1>
+                        <h6>Più ascolti, più accurati saranno i suggerimenti.</h6>
+                    </div>
+                    <div class="row-album clearfix">
+                    <!-- copertine row 2-->
+                        <div class="album fl">
+                            <div class="circle-play">
+                                <img src="./img/radar.jpeg" alt="radar"> 
+                                <i class="far fa-play-circle"></i>
+                            </div>  
+
+                            <h3>Release Radar</h3> 
+                            
+                        </div> 
+                        <div class="album fl">
+                            <div class="circle-play">
+                                <img src="./img/mixdaily.jpeg" alt="mixdaily"> 
+                                <i class="far fa-play-circle"></i>
+                            </div>  
+
+                            <h3>Daily Mix 1</h3> 
+                            
+                        </div> 
+                    </div> 
+                </div>
+
+                <div class="container-album">
+                    <div class="title">
+                        <!-- title album -->
+                        <h1>Artisti più popolari</h1>
+                        <h6>Più ascolti, più accurati saranno i suggerimenti.</h6>
+                    </div>
+                    <div class="row-album clearfix">
+                    <!-- copertine row 3-->
+                        <div class="album fl">
+                            <div class="circle-play">
+                                <img class="circle" src="./img/youg.jpeg" alt="young"> 
+                                <i class="far fa-play-circle"></i>
+                            </div>  
+
+                            <h3>Amazing</h3> 
+                        </div> 
+                        <div class="album fl">
+                            <div class="circle-play">
+                                <img class="circle" src="./img/einaudi.jpeg" alt="einaudi"> 
+                                <i class="far fa-play-circle"></i>
+                            </div>  
+
+                            <h3>Maestro</h3> 
+                        </div> 
+                    </div> 
+                </div>    
+                   
             </section>
         </main>
         <!-- nav footer -->
-        <footer></footer>
+        <footer>
+            <!-- container left -->
+            <div class="left">     
+                <img src="./img/sinister.jpeg" alt="sinister">
+                
+                <div>
+                    <h4>Sinister</h4>
+                    <h6>Brano Nome</h6>
+                </div>
+                <div>
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-folder"></i>
+                </div>
+            </div>
+            <div class="center">
+                <div class="icons">
+                    <div>
+                        <i class="fas fa-random"></i>
+                        <i class="fas fa-step-backward"></i>
+                    </div>
+                    <i class="far fa-play-circle"></i>
+                    <div>
+                        <i class="fas fa-step-forward"></i>
+                        <i class="fas fa-redo-alt"></i>
+                    </div>    
+                </div>
+                <div class="bar-time">
+                    <div class="time">0:25</div>
+                    <div></div>
+                    <div></div>
+                    <div class="time">4:35</div>
+                </div>
+            </div>
+            <div class="right">
+                <i class="fas fa-list"></i>
+                <i class="fas fa-desktop"></i>
+                <i class="fas fa-volume-up"></i>
+                <div></div>
+                <div></div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
