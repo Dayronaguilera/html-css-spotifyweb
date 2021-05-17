@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family:  'Montserrat', serif;
 }
 .cont main{
     flex-grow: 1;
@@ -35,7 +35,7 @@ h6 {
     overflow-y: scroll;
 }
 .box-1{
-    background-color: rgba(42, 42, 42, 0.9);
+    background-color: rgba(42, 42, 42, 1);
     height: 70px;
     width: 100%;  
     position: fixed;  
@@ -67,10 +67,13 @@ h6 {
     transform: scale(1.1);
     cursor: pointer;         
 }
+
 /* nav bar section */
-.box-2> ul{
-    display: flex; 
+.box-2> ul {
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .box-2> ul li{
     margin: 0px 10px;
@@ -80,7 +83,10 @@ h6 {
     display: flex; 
     flex-direction: column;  
     align-items: center;
+    justify-content: center;
 }
+
+/* nav hover li */
 .box-2> ul li:hover{
     color: white;
     cursor: pointer;
@@ -102,21 +108,19 @@ h6 {
     padding: 10px;
 }
 .title{
-    margin-top: 10px;
+    margin: 20px 0px;
     padding:0px 10px;
+    font-size: 20px;
 }
 .album{
-    width: calc(100% / 6);
     text-align: center;
-    margin-top: 20px;
-    padding: 10px; 
     line-height: 20px;
     
 }
 .album img{  
     width: 100%;
-    height: 300px;
     margin-bottom: 20px;
+    padding: 10px;
 }
 .circle-play{
     position: relative;
@@ -133,11 +137,11 @@ h6 {
     left: 50%;
     transform: translate(-50% , -50%);
 }
-.circle-play:hover img {
+.album:hover img {
     opacity: 0.5;   
 }
 
-.circle-play:hover i {
+.album:hover i {
     display: block; 
     cursor: pointer;    
 }
@@ -155,7 +159,6 @@ h6 {
     justify-content: space-between;
 }
 
-
 /* start aside section */
 .logo {
     height: 50px;
@@ -166,8 +169,14 @@ h6 {
     list-style: none;
     line-height: 30px;   
 }
-.aside-list ul .border-left{   
-    border-left: 2px rgb(46, 255, 109) solid;
+.aside-list ul hr{  
+    display: none;
+    width: 20px;
+    border:1px  rgb(46, 255, 109) solid;
+    transform: rotate(90deg);
+}
+.aside-list ul li:hover hr{
+    display: block;
 }
 .aside-list ul li{
     display: flex;
@@ -188,6 +197,8 @@ h6 {
 }
 .aside-list ul:nth-child(2){
     margin-left: 10px;
+    overflow-y: scroll;
+    max-height: 450px;
 }
 .aside-list span{  
     padding-left: 5px;
@@ -342,4 +353,21 @@ footer .center{
 .right:hover .punto {
     display:block;
     cursor: pointer;
+}
+/* device XS media*/
+@media only screen and (max-width: 575px){
+
+}
+    
+/* device sm media*/
+@media only screen and (min-width: 576px){
+  
+}
+/* device md media*/
+@media only screen and (min-width: 768px){
+
+}
+/* device lg media*/
+@media only screen and (min-width: 992px){
+
 }
