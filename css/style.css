@@ -375,10 +375,9 @@ footer .center{
 }
     
 /* device sm media*/
-@media only screen and (min-width: 576px){
- 
-}
+@media only screen and (max-width: 576px){
 
+}
 /* device md media*/
 @media only screen and (min-width: 768px){
 
