@@ -157,6 +157,7 @@ h6 {
     flex-direction: column;
     color: rgb(177, 172, 172);
     justify-content: space-between;
+    overflow-y: hidden;
 }
 
 /* start aside section */
@@ -251,7 +252,7 @@ footer .left img{
     margin: 0px 10px;
 }
 .left div:last-child{
-    margin-left: 10px;
+    margin-left: 7px;
 }
 .left div i{
     margin-left: 5px;  
